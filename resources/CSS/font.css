@@ -22,3 +22,14 @@
 #fw2 { font-weight: lighter; }
 #fw3 { font-weight: bolder; }
 #fw4 { font-weight: 100; }
+
+/* font-variant 속성 */
+#fv { font-variant: small-caps; }
+
+/* font-style 속성 */
+#fs1 { font-style: italic; }
+#fs2 { font-style: oblique; }
+
+/* font 속성 */
+#f1 { font : 16px/25px "궁서체"; }
+#f2 { font : italic bold 20px/20px "고딕체"; }
