@@ -5,3 +5,20 @@
 
 /* 웹 폰트 설정 */
 #web-font { font-family: 'Oswald', sans-serif;}
+
+/* font-size 속성 */
+#size1 { font-size: 30px;}
+#size2 { font-size: 2em;}
+#size3 { font-size: 150%;}
+/* 부모 요소 ul의 크기 변경 */
+#size4 { font-size: 200%; }
+
+#size5 { font-size: 30px; }
+#size6 { font-size: 2em; }
+#size7 { font-size: 150%; }
+
+/* font-weight 속성 */
+#fw1 { font-weight: bold; }
+#fw2 { font-weight: lighter; }
+#fw3 { font-weight: bolder; }
+#fw4 { font-weight: 100; }
