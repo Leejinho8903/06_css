@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>08_레이아웃스타일(블럭인라인)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+        .block{
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            color: white;
+        }
+
+        .area1 { background-color: red;}
+        .area2 { background-color: orange;}
+        .area3 { background-color: yellow;}
+        .area4 { background-color: green;}
+        .area5 { background-color: blue;}
+
+        .block-test1 { display: inline; }
+
+        .block-test2 { display: block; }
+
+        .block-test3 { display: inline-block; }
+        </style>
+    </head>
+    <body>
+    <h1>블럭, 인라인</h1>
+    <p>
+        블럭 요소 : 한 줄 전체를 차지하는 요소. 한 줄에 여러 요소가 올 수 없는 요소.<br>
+        Ex. div, hn, p, hr, ul, ol, form, table, .. 등등 <br>
+        인라인 요소 : 한 줄에서 일부분만 차지하는 요소. 한 줄에 여러 요소가 올수 있는 요소.<br>
+        Ex. span, img, input, label, buttom, textarea, br, .. 등등
+    </p>
+    
+
+    <h3>화면 배치 방법 변경</h3>
+    <p>
+        블럭 요소와 인라인 요소의 속성을 변경하여 배치 방식을 변경할 수 있다.
+    </p>
+
+    <h4>블럭 요소를 인라인 요소로 변경</h4>
+    <p>
+        display : inline 테스트<br>
+        인라인 요소로 변경되면서 width와 height 속성이 무시 된다.
+    </p>
+
+    <div class="block block-test1 area1">첫 번째 영역</div>
+    <div class="block block-test1 area2">두 번째 영역</div>
+    <div class="block block-test1 area3">세 번째 영역</div>
+    <div class="block block-test1 area4">네 번째 영역</div>
+    <div class="block block-test1 area5">다섯 번째 영역</div>
+
+    <h4>인라인 요소를 블럭 요소로 변경</h4>
+    <p>
+        display : block 테스트<br>
+        인라인 요소를 블럭 요소로 지정하면 width와 height 값을 지정할 수 있다.
+    </p>
+    <span class="block block-test2 area1">첫 번째 영역</span>
+    <span class="block block-test2 area2">두 번째 영역</span>
+    <span class="block block-test2 area3">세 번째 영역</span>
+    <span class="block block-test2 area4">네 번째 영역</span>
+    <span class="block block-test2 area5">다섯 번째 영역</span>
+
+
+    <h4>블럭 요소를 인라인 요소로 변경2</h4>
+    <p>
+        display : inline-block 테스트
+        영역은 인라인 요소로 변경 되지만 내용은 블럭 요소로 지정 되어
+        width와 height 속성을 설정할 수 있다.
+    </p>
+    <div class="block block-test3 area1">첫 번쨰 영역</div>
+    <div class="block block-test3 area2">두 번쨰 영역</div>
+    <div class="block block-test3 area3">세 번쨰 영역</div>
+    <div class="block block-test3 area4">네 번쨰 영역</div>
+    <div class="block block-test3 area5">다섯 번쨰 영역</div>
+
+
+
+
+
+
+
+    </body>
+</html>
