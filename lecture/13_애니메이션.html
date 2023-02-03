@@ -43,6 +43,76 @@
             width: 100%;
         }
 
+        .timing:nth-of-type(1) { transition-timing-function: linear ;}
+        .timing:nth-of-type(2) { transition-timing-function: ease ;}
+        .timing:nth-of-type(3) { transition-timing-function: ease-in ;}
+        .timing:nth-of-type(4) { transition-timing-function: ease-out ;}
+        .timing:nth-of-type(5) { transition-timing-function: ease-in-out ;}
+
+        .delay:hover{
+            transform: rotate(180deg);
+            background-color: yellow;
+        }
+
+        .delay {
+           /* transition: property duration timing-function delay; */
+           transition: all 5s linear 3s;
+        }
+
+        .pika {
+            width: 200px;
+            position: relative;
+        }
+
+        /* @keyframes 정의 */
+        /* 1. 시작 시점과 끝 시점 두 개만 있는 경우 */
+        @keyframes jump{
+            from {
+                margin-left: 300px;
+            }
+            to{
+                margin-left: 100px;
+                margin-bottom: 200px;
+            }
+        }
+
+        /* 애니메이션 jump를 #jump img에 적용 */
+        #jump {
+            /* @keyframes에서 작성한 이름을 작성 */
+            animation-name: jump;
+            /* 애니메이션 실행 시간 */
+            animation-duration: 2s;
+            /* 애니메이션 반복 횟수 */
+            animation-iteration-count: 5;
+        }
+
+        /* 2. 중간 작업이 있는 경우 */
+        @keyframes shake {
+            0% {
+                border: 5px solid black;
+            }
+            50% {
+                border: 10px solid black;
+                border-radius: 50%;
+                margin-left: 300px;
+                transform: translate(50px, 50px);
+            }
+            100% {
+                border: 5px solid black;
+                margin-left: 600px;
+                transform: rotate(45deg);
+            }
+        }
+
+        /* 애니메이션 shake를 #shake img에 적용*/
+        #shake {
+            /* infinite : 애니메이션 무한 반복 (횟수 제한 없음) 
+            alternate : 애니메이션 종료 후 다시 시작할 때 역방향으로 시작 */
+            animation: shake 2s infinite alternate;
+            
+            
+        }
+
         </style>
     </head>
     <body>
@@ -96,5 +166,19 @@
             <p>ease-in-out</p>
             <div class="box timing"></div>
         </div>
+        <h3>트랜지션 시간 지연하기</h3>
+        <div class="box delay"></div>
+
+        <h3>keyframes</h3>
+        <p>
+            @keyframes를 사용하면 간단한 애니메이션 여러 개를 한꺼번에 실행할 수 있다.
+            @keyframes에는 애니메이션 이름과 CSS 속성을 시점을 나누어서 설정한다. <br>
+            Ex. from ~ to, 0% ~ 30% ~ 60% ~ 100% 등
+        </p>
+
+        <img class="pika" id="jump" src="../resources/images/pikachu.png">
+        <hr>
+        <img class="pika" id="shake" src="../resources/images/pikachu.png">
+
     </body>
 </html>
