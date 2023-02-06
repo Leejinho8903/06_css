@@ -125,14 +125,23 @@ footer p {
 
 /* 기사 부분 */
 article {
-    width: 74%;
+   /* width: 74%; */
+   /* 2-column에서 3-column으로 변경 시 width 조정 */
+   width: 55%;
+   order: 2;
 }
 
 /* 사이드 바 */
 aside {
     width: 22%;
+    order: 3;
 }
 
+/* 광고 배너 */
+.ad {
+    /* 컬럼 순서 변경 - display : flex가 적용 된 자식 요소에서 동작 */
+    order: 1;
+}
 /* 뉴스 컨텐츠 수평 정렬 및 여백 */
 .news-content {
     display: flex;
@@ -220,6 +229,81 @@ aside p {
     padding: 12px 10px;
 }
 
+/* for mobile ---------------------------------------------------------------*/
+/* 변경 기준이 되는 화면 크기를 브레이크 포인트라고 하며 디바이스 별로 width는 다르다.
+ 450~760 정도가 기준으로 중간 정도인 600을 브레이크 포인트로 설정한다. */
+@media (max-width:600px){
+
+    /* 제목 문자 크기 축소 */
+    .page-title {
+        font-size: 2.5rem;
+    }
+    /* header */
+    /* 내비 글자 크기 및 여백 축소 */
+    .main-nav {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .main-nav li {
+        margin: 0 20px;
+    }
+
+    /* 로고와 내비 수직 정렬 */
+    .page-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 뉴스 컨텐츠 수직 정렬 */
+    .news-content {
+        flex-direction: column;
+    }
+
+    /* 원래 컬럼을 나누어서 차지하던 너비를 100% 차지하게 변경 */
+    article,
+    aside {
+        width: 100%;
+    }
+
+    /* 문자 크기 및 여백 조절 */
+    #news .page-title {
+        margin-top: 30px;
+    }
+
+    aside {
+        margin-top: 60px;
+    }
+
+    .post-info {
+        margin-bottom: 60px;
+    }
+
+    .post-date {
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+    }
+
+    .post-date span {
+        font-size: 0.875rem;
+        padding-top: 2px;
+    }
+
+    .post-title {
+        font-size: 1.375rem;
+    }
+
+    .post-cat {
+        font-size: 0.875rem;
+        margin-top: 10px;
+    }
+
+    .post-title,
+    .post-cat {
+        margin-left: 80px;
+    }
+}
 
 
 
