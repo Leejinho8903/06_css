@@ -305,6 +305,65 @@ aside p {
     }
 }
 
+/* menu ---------------------------------------------------------------------*/
+#menu {
+    background-image: url("../images/menu-bg.jpg");
+    min-height: 100vh;
+}
 
+.menu-content {
+    max-width: 560px;
+    margin-top: 10%;
+}
 
+.menu-content .page-title {
+    text-align: center;
+}
 
+.menu-content p {
+    font-size: 1.125rem;
+    font-weight: bolder; /* 폰트 굵기 */
+    margin: 10px 0 0;
+}
+
+/* grid ---------------------------------------------------------------------*/
+.grid {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 창의 너비가 작아졌을 때 이미지가 너무 작아지지 않도록 최소 값 지정 */
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    /* 창의 너비가 작아지면 2,3번째 요소가 잘려 보이므로 3열로 한정하지 않고 
+    화면의 너비에 맞게 요소의 수를 조정 */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 6%;
+    margin-bottom: 50px;
+}
+
+.item p {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 강조 하고 싶은 item의 크기 변경 */
+.big-box {
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+
+/* big-box와 다른 작은 이미지간의 높이 맞춤 */
+.big-box img {
+    height: 94%;
+    /* 이미지 비율 맞춤 (포함) */
+    object-fit: cover;
+}
+
+/* 타일형 레이아웃 변경으로 인해 폭이 좁아지면 메뉴끼리 크기가 맞지 않으므로
+폭이 좁아질 경우 1-column으로 변경하는 미디어 쿼리 */
+@media (max-width: 600px){
+    /* big-box가 2행, 2열을 차지하는 설정을 리셋 */
+    .big-box {
+        grid-row: auto;
+        grid-column: auto;
+    }
+}
