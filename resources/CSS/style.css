@@ -98,10 +98,127 @@ img {
     background-repeat: no-repeat;
 }
 
+/*---------------------------------NEWS--------------------------------------*/
+#news{
+    background-color: skyblue;
+    height: 270px;
+    margin-bottom: 40px;
+}
 
+#news .page-title {
+    text-align: center;
+}
 
+/* footer--------------------------------------------------------------------*/
 
+footer {
+    background-color: #432;
+    text-align: center;
+    padding: 26px 0;
+}
 
+footer p {
+    color: white;
+}
+
+/* news content -------------------------------------------------------------*/
+
+/* 기사 부분 */
+article {
+    width: 74%;
+}
+
+/* 사이드 바 */
+aside {
+    width: 22%;
+}
+
+/* 뉴스 컨텐츠 수평 정렬 및 여백 */
+.news-content {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+/* 기사 날짜 장식 */
+.post-info {
+    position: relative;
+    padding-top: 4px;
+    padding-bottom: 40px;
+}
+
+.post-date {
+    background-color: #0bd;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+    font-size: 1.625rem;
+    text-align: center;
+    /* post-info 기준 절대 위치 */
+    position: absolute;
+    top: 0;
+    padding-top: 10px;
+}
+
+.post-date span {
+    font-size: 1rem;
+    border-top: 1px rgba(225, 255, 255, 0.5) solid;
+    padding-top: 6px;
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.post-title {
+    font-family: "나눔명조";
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.post-title,
+.post-cat {
+    margin-left: 120px;
+}
+
+article img {
+    margin-bottom: 20px;
+}
+
+article p {
+    margin-bottom: 1rem;
+}
+
+/* side bar -----------------------------------------------------------------*/
+.sub-title {
+    font-size: 1.375rem;
+    padding: 0 8px 8px;
+    border-bottom: 2px #0bd solid;
+    font-weight: normal;
+}
+
+.sub-menu {
+    list-style: none;
+    margin-bottom: 60px;
+}
+
+.sub-menu li {
+    border-bottom: 1px #ddd solid;
+}
+
+.sub-menu a {
+    color: #432;
+    padding: 10px;
+    display: block;
+}
+
+.sub-menu a:hover {
+    color: #0bd;
+}
+
+aside p {
+    padding: 12px 10px;
+}
 
 
 
